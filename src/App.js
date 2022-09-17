@@ -1,9 +1,21 @@
-
+import React from "react";
+import {Link} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Shopping Cart</h1>
+    <div >
+      <ul>
+        <Link to="/">
+        <li>Home</li>
+        </Link>
+        <Link to="/About">
+        <li>About</li>
+        </Link>
+        <Link to="/Shop">
+        <li>Shop</li>
+        </Link>
+      </ul>
+      <h2>Welcome to the shop-zone</h2>
     </div>
   );
 }
