@@ -11,8 +11,9 @@ const Home = () => {
             <h1>Welcome to the world of Fortnite</h1>
             <p>See whats on sale in the store <strong>today</strong></p>
             
-            <Figure>
+            <Figure >
                 <Figure.Image
+                rounded
                 width={500}
                 height={400}
                 alt="store image"
