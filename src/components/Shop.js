@@ -4,7 +4,7 @@ const Shop = () => {
 
     return (
         <div>
-            <h1>Hello from the Shop</h1>
+            <h1>Welcome to the Shop</h1>
         </div>
     )
 

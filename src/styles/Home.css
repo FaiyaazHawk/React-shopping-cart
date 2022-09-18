@@ -1,0 +1,18 @@
+html {
+    background-color: aqua;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle--text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(50%);
+    transform: translateY(50%);
+    color: blue;
+}
