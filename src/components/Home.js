@@ -8,7 +8,7 @@ const Home = () => {
 
     return (
         <Container>
-            <h1>Welcome to the world of Fortnite</h1>
+            <h1>Welcome to the world of Fashion</h1>
             <p>See whats on sale in the store <strong>today</strong></p>
             
             <Figure >
