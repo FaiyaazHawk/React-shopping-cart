@@ -21,6 +21,9 @@ function App() {
               <LinkContainer to="/Shop">
                 <Nav.Link >Shop</Nav.Link>
               </LinkContainer>
+              <LinkContainer to="/Cart">
+                <Nav.Link >Cart</Nav.Link>
+              </LinkContainer>
             </Nav>        
           </Container>
         </Navbar>

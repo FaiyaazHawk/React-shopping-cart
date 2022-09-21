@@ -8,8 +8,9 @@ const Card = (props) => {
     console.log(props)
     return (
         <>
-            <Container>
+            <Container className="container">
                 <img className="img-thumbnail" src={props.item.image} alt={props.item.title}/>
+                <h3>Price:{props.item.price}</h3>
                 <Button>Add</Button>
                 <Button>Remove</Button>
                 <h1>{props.item.title}</h1>
