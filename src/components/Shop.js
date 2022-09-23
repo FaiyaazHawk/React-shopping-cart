@@ -1,12 +1,14 @@
 import React from "react";
-import Card from "./Card";
+import ProductCard from "./productCard";
+import '../styles/Shop.css'
 
-const Shop = () => {
+const Shop = ({addToCart}) => {
+    
     const [content, setContent] = React.useState([])
 
 
     const fetchContent = async () => {
-       await fetch("https://fakestoreapi.com/products?limit=5")
+       await fetch("https://fakestoreapi.com/products?limit=12")
         .then(response => response.json())
         .then(data => setContent(data))
     }
@@ -16,19 +18,13 @@ const Shop = () => {
         
     }, [])
     
-   
- 
-        
-        
-
-
+           
     const cardElements = content.map((item) => 
-        <Card key={item.id} item={item}/> 
+        <ProductCard key={item.id} item={item} /> 
         )
     
     return (
-        <div>
-            <h2>Welcome to the Shop</h2>
+        <div className="shop--page">
             {cardElements}
         </div>
     )

@@ -1,8 +1,11 @@
-.container {
-    width: 500px;
-    height: auto;
-}
+
+
 .img-thumbnail {
     height: 200px;
     width: 200px;
+}
+.priceblock {
+    display: grid;
+    gap: 5px;
+    
 }

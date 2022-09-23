@@ -1,10 +1,12 @@
 import React from "react";
 import "../styles/Card.css"
-import { Container, Button } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 
 
-const Card = (props) => {
+const productCard = (props) => {
+    
+    
     const [quantity, setQuantity] = React.useState(0)
 
 
@@ -22,20 +24,22 @@ const Card = (props) => {
     
     return (
         <>
-            <Container className="container">
+            <Card style={{width: '18rem'}}>
                 <img className="img-thumbnail" src={props.item.image} alt={props.item.title}/>
                 <h3>Price:{props.item.price}</h3>
-                <input type="number" id="number" value={quantity}></input>
-                <Button onClick={incrementAmount}>Add</Button>
-                <Button onClick={decrementAmount}>Remove</Button>
-                <button >Add to cart</button>
+                <div className="priceblock">
+                    <input type="number" id="number" value={quantity} onChange={(e)=>{setQuantity(parseInt(e.target.value))}}></input>
+                    <Button onClick={incrementAmount}>Add</Button>
+                    <Button onClick={decrementAmount}>Remove</Button>
+                    <Button >Add to cart</Button>
+                </div>
                 <h1>{props.item.title}</h1>
                 <p>{props.item.description}</p>
-            </Container>
+            </Card>
             
         </>
         
     )
 }
 
-export default Card
+export default productCard

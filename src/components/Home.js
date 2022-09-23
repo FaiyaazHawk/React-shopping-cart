@@ -20,7 +20,7 @@ const Home = () => {
                 src={Shop}
                 />
                 <Figure.Caption>
-                    A world of wonder awaits
+                    @Mike Petrucci
                 </Figure.Caption>
             </Figure>
             <div className="fixed-bottom">

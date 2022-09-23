@@ -6,16 +6,20 @@ import Cart from "./Cart";
 import App from "../App";
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
+
+
 const RouteSwitch = () => {
+    
+    
     return (
         <BrowserRouter>
-        <App/>
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About/>}/>
-            <Route path="/shop" element={<Shop/>}/>
-            <Route path="/cart" element={<Cart/>}/>
-        </Routes>
+            <App/>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About/>}/>
+                <Route path="/shop" element={<Shop  />}/>
+                <Route path="/cart" element={<Cart  />}/>
+            </Routes>
         </BrowserRouter>
     )
 
