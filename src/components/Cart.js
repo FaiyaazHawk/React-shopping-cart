@@ -1,8 +1,22 @@
 import React from "react";
+import CheckoutCard from "./CheckoutCard";
 
-const Cart = (props) => {
+const Cart = ({cartData}) => {
+    
+    
+    const [checkout, setCheckout] = React.useState(cartData)
+    
+    console.log(checkout)
+
+    const checkoutelements = checkout.map(item => (
+        <CheckoutCard item={item}/>
+    ))
+
     return (
-        <h1>Hello from Cart</h1>
+        <div>
+           <h1>check console and destructure</h1> 
+           {checkoutelements}
+        </div>
     )
 }
 

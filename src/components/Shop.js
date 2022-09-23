@@ -4,7 +4,7 @@ import '../styles/Shop.css'
 
 
 
-const Shop = () => {
+const Shop = (props) => {
     
     const [content, setContent] = React.useState([])
     const [cart, setCart] = React.useState([])
@@ -26,6 +26,10 @@ const Shop = () => {
         fetchContent()
         
     }, [])
+
+    React.useEffect(() =>{
+        props.retrieveData(cart)
+    }, [cart])
     
            
     const cardElements = content.map((item) => 
