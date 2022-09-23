@@ -5,6 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import {LinkContainer} from "react-router-bootstrap"
 
+
+///No idea how this happened where app became the navbar but it is what it is. Tried to untangle but breaks everything.
 function App() {
     return (
       <>

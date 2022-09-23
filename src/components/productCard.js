@@ -24,14 +24,14 @@ const productCard = (props) => {
     
     return (
         <>
-            <Card style={{width: '18rem'}}>
+            <Card style={{width: '15rem'}}>
                 <img className="img-thumbnail" src={props.item.image} alt={props.item.title}/>
                 <h3>Price:{props.item.price}</h3>
                 <div className="priceblock">
                     <input type="number" id="number" value={quantity} onChange={(e)=>{setQuantity(parseInt(e.target.value))}}></input>
                     <Button onClick={incrementAmount}>Add</Button>
                     <Button onClick={decrementAmount}>Remove</Button>
-                    <Button >Add to cart</Button>
+                    <Button onClick={() => props.addToCart(props.item, quantity)} >Add to cart</Button>
                 </div>
                 <h1>{props.item.title}</h1>
                 <p>{props.item.description}</p>
