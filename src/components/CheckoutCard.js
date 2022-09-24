@@ -1,13 +1,27 @@
 import React from "react";
+import { Card } from 'react-bootstrap'
 
 const CheckoutCard = (props) => {
     
+    const [cart, setCart] = React.useState()
+    
+    
+
+    React.useEffect(() => {
+        setCart(props)
+        
+    }, [cart])
+
+
 
     return (
-        <div>
-            <h1>Count: {props.item.count}</h1>
-            <h1>Name: {props.item.item.title}</h1>
-        </div>
+            <Card style={{width: '15rem'}}>
+                <img className="img-thumbnail" src={props.item.item.image} alt={props.item.item.title}/>
+                <h3>Price:{parseInt(props.item.item.price)*(parseInt(props.item.count))}</h3>
+                <h3>Quantity: {props.item.count}</h3>
+                <h1>{props.item.item.title}</h1>
+                <p>{props.item.item.description}</p>
+            </Card>
     )
 
 }

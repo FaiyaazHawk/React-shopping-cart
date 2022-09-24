@@ -1,5 +1,6 @@
 import React from "react";
 import CheckoutCard from "./CheckoutCard";
+import { Container } from "react-bootstrap";
 
 const Cart = ({cartData}) => {
     
@@ -13,10 +14,9 @@ const Cart = ({cartData}) => {
     ))
 
     return (
-        <div>
-           <h1>check console and destructure</h1> 
+        <Container style={{display: 'flex'}}>
            {checkoutelements}
-        </div>
+        </Container>
     )
 }
 

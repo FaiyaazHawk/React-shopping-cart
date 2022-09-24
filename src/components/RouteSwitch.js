@@ -14,6 +14,8 @@ const RouteSwitch = () => {
     function retrieveData(cart) {
         setCartData(cart)
     }
+
+    
     
     return (
         <BrowserRouter>
