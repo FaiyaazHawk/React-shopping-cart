@@ -3,16 +3,6 @@ import { Card } from 'react-bootstrap'
 
 const CheckoutCard = (props) => {
     
-    const [cart, setCart] = React.useState()
-    
-    
-
-    React.useEffect(() => {
-        setCart(props)
-        
-    }, [cart])
-
-
 
     return (
             <Card style={{width: '15rem'}}>
