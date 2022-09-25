@@ -10,7 +10,7 @@ const Cart = ({cartData}) => {
     console.log(checkout)
 
     const checkoutelements = checkout.map(item => (
-        <CheckoutCard item={item}/>
+        <CheckoutCard key={item.item.id} item={item}/>
     ))
 
     return (
