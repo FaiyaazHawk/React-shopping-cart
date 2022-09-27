@@ -8,9 +8,6 @@ const Shop = (props) => {
     
     const [content, setContent] = React.useState([])
     
-
-    
-
     const fetchContent = async () => {
        await fetch("https://fakestoreapi.com/products?limit=12")
         .then(response => response.json())
@@ -24,7 +21,7 @@ const Shop = (props) => {
 
            
     const cardElements = content.map((item) => 
-        <ProductCard key={item.id} item={item} addToCart={props.addToCart} retrieveData={props.retrieveData} /> 
+        <ProductCard key={item.id} item={item} addToCart={props.addToCart} /> 
         )
     
     return (

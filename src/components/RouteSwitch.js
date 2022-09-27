@@ -18,6 +18,10 @@ const RouteSwitch = () => {
             item: item
         }]  );
     }
+    function removeItems(name) {
+        const filteredItem = cartData.filter(item => item.item.title !== name)
+        setCartData(filteredItem)
+    }
     
     
     return (
@@ -28,7 +32,7 @@ const RouteSwitch = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About/>}/>
                     <Route path="/shop" element={<Shop  addToCart={addToCart}/>}/>
-                    <Route path="/cart" element={<Cart  cartData={cartData}/>}/>
+                    <Route path="/cart" element={<Cart  cartData={cartData} removeItems={removeItems} />}/>
                 </Routes>
             
         </BrowserRouter>

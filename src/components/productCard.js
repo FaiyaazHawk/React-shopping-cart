@@ -5,7 +5,6 @@ import { Card, Button } from "react-bootstrap";
 
 
 const productCard = (props) => {
-    
     const [quantity, setQuantity] = React.useState(0)
 
 
@@ -19,7 +18,6 @@ const productCard = (props) => {
     }
 
     const addToCart = () => {
-        console.log(props)
         props.addToCart(props.item, quantity)
     }
     

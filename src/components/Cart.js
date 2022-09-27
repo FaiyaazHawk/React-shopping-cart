@@ -3,15 +3,11 @@ import CheckoutCard from "./CheckoutCard";
 import { Container } from "react-bootstrap";
 
 
-const Cart = ({cartData}) => {
+const Cart = (props) => {
     
-    
-    
-    const [checkout, setCheckout] = React.useState(cartData)
-     
 
-    const checkoutelements = checkout.map(item => (
-        <CheckoutCard key={item.item.id} item={item}/>
+    const checkoutelements = props.cartData.map(item => (
+        <CheckoutCard key={item.item.id} item={item} removeItems={props.removeItems}/>
     ))
 
     return (
