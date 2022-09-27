@@ -24,7 +24,7 @@ function App() {
                 <Nav.Link >Shop</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/Cart">
-                <Nav.Link >Cart</Nav.Link>
+                <Nav.Link >Cart </Nav.Link>
               </LinkContainer>
             </Nav>        
           </Container>
