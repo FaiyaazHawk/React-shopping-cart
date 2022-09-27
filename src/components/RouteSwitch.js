@@ -11,21 +11,26 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 const RouteSwitch = () => {
     const [cartData, setCartData] = React.useState([])
     
-    function retrieveData(cart) {
-        setCartData(cart)
+    
+    function addToCart(item, quantity) {
+        setCartData(prevCartData => [...prevCartData, {
+            count: quantity,
+            item: item
+        }]  );
     }
-
     
     
     return (
         <BrowserRouter>
             <App/>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About/>}/>
-                <Route path="/shop" element={<Shop  retrieveData={retrieveData}/>}/>
-                <Route path="/cart" element={<Cart  cartData={cartData} retrieveData={retrieveData}/>}/>
-            </Routes>
+            
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About/>}/>
+                    <Route path="/shop" element={<Shop  addToCart={addToCart}/>}/>
+                    <Route path="/cart" element={<Cart  cartData={cartData}/>}/>
+                </Routes>
+            
         </BrowserRouter>
     )
 
