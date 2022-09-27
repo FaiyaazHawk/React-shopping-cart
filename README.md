@@ -1,3 +1,9 @@
+# Basic cart created using react
+
+Goal of the project was to make a simple store page using React.
+Used the project to learn the basics of React, Bootstrap and React-Bootstrap
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
